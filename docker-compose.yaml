@@ -1,0 +1,14 @@
+version: '3'
+services:
+  vite_docker:
+    container_name: vite_docker
+    build:
+      context: ./project
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - type: bind
+        source: ./project
+        target: /srv/app
+    tty: true
