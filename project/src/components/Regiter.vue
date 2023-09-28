@@ -46,20 +46,12 @@ let submit = async () => {
     errors['wrong_repeat'] = 'Пароли не совпадают'
   }
 
-  //sadasdasdas@mail.ru
-  // sadasdasdas
-
-  // testasdqwe@mail.ru
-  // qweasd123
-
   if (Object.keys(errors).length === 0) {
     await axios.post('https://jurapro.bhuser.ru/api-shop/signup', {
       fio: fio,
       email: email,
       password: password
     }).then(response => {
-      // let token = response.data.data.user_token;
-      // VueCookies.set('token', token);
       window.location = '/authorization'
     }).catch(errorResponse => {
       let errorsResponse = errorResponse.response.data.error.errors;

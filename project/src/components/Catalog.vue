@@ -11,8 +11,18 @@ let products = [];
 
 await axios.get('https://jurapro.bhuser.ru/api-shop/products', {
 }).then(response => {
-  products = response.data.data
+  products = response.data.data;
 });
+
+let addToBasket = (id) => {
+  axios.post(`https://jurapro.bhuser.ru/api-shop/cart/${id}`, {
+    product_id: id,
+  }, {
+    headers: { Authorization: `Bearer ${token}` }
+  }).then(response => {
+    console.log(response.data.data.message)
+  }).catch(error => {});
+}
 </script>
 
 <template>
@@ -25,7 +35,7 @@ await axios.get('https://jurapro.bhuser.ru/api-shop/products', {
           <span class="catalog_item_price">{{product.price}}₽</span>
         </div>
         <span class="catalog_item_name">{{product.name}}</span>
-        <button v-if="token" class="catalog_item_button press_activation" data-id="${{product.id}}">Добавить</button>
+        <button v-if="token" class="catalog_item_button press_activation" @click="addToBasket(product.id)">Добавить</button>
       </div>
     </div>
   </section>

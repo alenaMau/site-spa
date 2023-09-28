@@ -24,6 +24,7 @@ body {
     width: 890px;
     height: 952px;
     margin: 20px 0 40px 0;
+    overflow: auto;
 }
 
 .basket_products_decor {

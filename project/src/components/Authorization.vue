@@ -45,9 +45,7 @@ let submit = async () => {
   }
   forceRerender()
 }
-// qweqweqwe@mail.ru
-// qweqweqwe@mail.ru
-// ret
+
 </script>
 
 <template>
