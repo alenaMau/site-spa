@@ -1,6 +1,7 @@
 <script setup>
 import '../assets/css/header.css'
 import VueCookies from 'vue-cookies'
+import axios from "axios";
 
 let showButton = false;
 if (window.location.pathname.length > 1) {
@@ -8,6 +9,20 @@ if (window.location.pathname.length > 1) {
 }
 
 let token = VueCookies.get('token');
+
+const config = {
+  headers: { Authorization: `Bearer ${token}` }
+};
+
+let logout = () => {
+  axios.get('https://jurapro.bhuser.ru/api-shop/logout', config).then(response => {
+    if (response.data.data.message === 'logout') {
+      VueCookies.remove('token')
+      window.location = '/'
+    }
+  }).catch(error => {});
+}
+
 </script>
 
 <template>
@@ -39,11 +54,17 @@ let token = VueCookies.get('token');
               Вход
             </router-link>
         </div>
-        <div class="header_icon_shoppingCart press_activation" v-if="!token">
-          <div class="header_imgIcon_authorization"></div>
-          <router-link :to="{ name: 'authorization' }"  class="header_nameIcon_authorization">
-            Оформленные заказы
-          </router-link>
+        <router-link :to="{ name: 'completedOrders' }" class="header_nameIcon_completedOrders">
+          <div class="header_icon_shoppingCart press_activation" v-if="token">
+            <div class="header_imgIcon_completedOrders"></div>
+            <span>Оформленные заказы</span>
+          </div>
+        </router-link>
+        <div class="header_icon_shoppingCart press_activation" v-if="token" @click="logout()">
+          <div class="header_imgIcon_out"></div>
+          <span class="header_nameIcon_completedOrders">
+            Выход
+          </span>
         </div>
       </div>
     </div>

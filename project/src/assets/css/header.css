@@ -38,6 +38,26 @@ header {
     flex-shrink: 0;
 }
 
+.header_imgIcon_out {
+    background-image: url("../img/back.svg");
+    width: 38px;
+    height: 33px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.header_imgIcon_completedOrders {
+    background-image: url("../img/comlet.svg");
+    width: 38px;
+    height: 33px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.header_nameIcon_completedOrders {
+
+}
+
 .header_imgIcon_authorization {
     background-image: url("../img/authorizationUser.svg");
     width: 38px;

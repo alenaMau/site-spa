@@ -3,7 +3,7 @@ import '../assets/css/register.css'
 import axios from "axios";
 import Header from "./Header.vue";
 import Footer from "./Footer.vue";
-import VueCookies from 'vue-cookies'
+
 import { ref } from 'vue';
 
 const componentKey = ref(0);

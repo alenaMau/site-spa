@@ -6,7 +6,6 @@ import Register from './components/Regiter.vue'
 import Basket from './components/Basket.vue'
 import Confirmation from "./components/Confirmation.vue";
 import Authorization from "./components/Authorization.vue";
-import User from "./components/User.vue";
 import CompletedOrders from "./components/CompletedOrders.vue";
 
 
@@ -38,11 +37,6 @@ const router = createRouter({
             name: 'authorization'
         },
         {
-            path: '/user',
-            component: User,
-            name: 'user'
-        },
-        {
             path: '/completedOrders',
             component: CompletedOrders,
             name: 'completedOrders'
@@ -50,14 +44,6 @@ const router = createRouter({
     ],
     history: createWebHistory()
 })
-
-export default {
-    data() {
-        return{
-            amount:1
-        }
-    },
-}
 
 const app = createApp(App)
 app.use(router)

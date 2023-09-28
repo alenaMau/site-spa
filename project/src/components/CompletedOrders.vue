@@ -1,10 +1,13 @@
-<script>
+<script setup>
 import '../assets/css/completedorders.css'
 import Header from "./Header.vue";
 import Footer from "./Footer.vue";
-export default {
-components: {Footer, Header}
+import VueCookies from "vue-cookies";
+
+if (!VueCookies.get('token')) {
+  window.location = '/';
 }
+
 </script>
 
 

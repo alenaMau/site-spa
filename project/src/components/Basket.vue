@@ -7,6 +7,11 @@ import {
   useRouter
 } from 'vue-router'
 import {ref} from "vue";
+import VueCookies from "vue-cookies";
+
+if (!VueCookies.get('token')) {
+  window.location = '/';
+}
 
 const router = useRouter()
 
