@@ -1,0 +1,70 @@
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+.authorization_box {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    flex-direction: column;
+    height: 1141px;
+    align-items: center;
+}
+
+.authorization_box_form {
+    width: 650px;
+    height: 380px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #9EB33E;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_buttonHome {
+    background: #3b5338;
+    border-radius: 25px;
+    border: #3b5338 10px;
+    width:85px;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+input {
+    width: 540px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+}
+
+.basket_products_decorButton {
+    display: inline-flex;
+    padding: 15px 119px 16px 118px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #F6F7CD;
+    border: none;
+    font-size: medium;
+}
+button:hover {
+    background: #dadb93;
+}

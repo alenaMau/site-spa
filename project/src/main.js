@@ -1,5 +1,64 @@
 import { createApp } from 'vue'
-import './style.css'
+import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
+import Catalog from './components/Catalog.vue'
+import Register from './components/Regiter.vue'
+import Basket from './components/Basket.vue'
+import Confirmation from "./components/Confirmation.vue";
+import Authorization from "./components/Authorization.vue";
+import User from "./components/User.vue";
+import CompletedOrders from "./components/CompletedOrders.vue";
 
-createApp(App).mount('#app')
+
+const router = createRouter({
+    routes: [
+        {
+            path: '/',
+            component: Catalog,
+            name: 'home'
+        },
+        {
+            path: '/register',
+            component: Register,
+            name: 'register'
+        },
+        {
+            path: '/basket',
+            component: Basket,
+            name: 'basket'
+        },
+        {
+            path: '/confirmation',
+            component: Confirmation,
+            name: 'confirmation'
+        },
+        {
+            path: '/authorization',
+            component: Authorization,
+            name: 'authorization'
+        },
+        {
+            path: '/user',
+            component: User,
+            name: 'user'
+        },
+        {
+            path: '/completedOrders',
+            component: CompletedOrders,
+            name: 'completedOrders'
+        }
+    ],
+    history: createWebHistory()
+})
+
+export default {
+    data() {
+        return{
+            amount:1
+        }
+    },
+}
+
+const app = createApp(App)
+app.use(router)
+app.mount('body')

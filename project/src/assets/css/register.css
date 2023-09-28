@@ -1,0 +1,75 @@
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+.registry {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    flex-direction: column;
+    height: 1141px;
+    align-items: center;
+}
+
+.registry_block {
+    width: 650px;
+    height: 626px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #9EB33E;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+input:valid {
+    width: 540px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+}
+
+input:invalid {
+    background: #d1a0a0;
+    border-color: #bd4c4c ;
+}
+
+.basket_products_decorButton {
+    display: inline-flex;
+    padding: 15px 119px 16px 118px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #F6F7CD;
+    border: none;
+    font-size: medium;
+
+}
+
+.backlink {
+    background: #3b5338;
+    width: 67px;
+    height: 27px;
+    border-radius: 15px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background: #dadb93;
+}

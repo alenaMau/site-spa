@@ -1,0 +1,87 @@
+header {
+    background-color:#9EB33E;
+    max-width: 100%;
+    height: 80px;
+    border-radius: 83px;
+    padding:0 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    align-items: center;
+
+}
+
+.header_logo {
+    display: flex;
+    width: 159px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header_siteSearch {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px
+}
+
+.header_icon {
+    display: flex;
+    gap: 37px;
+}
+
+.header_imgIcon_shoppingCart {
+    background-image: url("../img/cart.svg");
+    width: 38px;
+    height: 33px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.header_imgIcon_authorization {
+    background-image: url("../img/authorizationUser.svg");
+    width: 38px;
+    height: 33px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.header_icon_shoppingCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.press_activation:active {
+    vertical-align: middle;
+    color: #3b5338;
+    cursor: pointer;
+}
+
+.header_imgIcon_user{
+    background-image: url("../img/user.svg");
+    width: 38px;
+    height: 33px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    text-decoration: none;
+
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.header_buttonHome {
+    background: #3b5338;
+    border-radius: 25px;
+    border: #3b5338 10px;
+    width:85px;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fafbe6;
+}

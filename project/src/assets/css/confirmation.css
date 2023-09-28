@@ -1,0 +1,42 @@
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+.confirmation {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    flex-direction: column;
+    height: 1141px;
+    align-items: center;
+    gap: 15px;
+}
+
+.confirmation_img {
+    background-image: url("../img/icon.svg");
+    background-repeat: no-repeat;
+    width: 195px;
+    height: 197px;
+}
+
+button:hover {
+    background: #dadb93;
+}
+
+.press_activation:active {
+    vertical-align: middle;
+    color: #3b5338;
+    cursor: pointer;
+}
+
+.basket_products_decorB {
+    display: inline-flex;
+    padding: 15px 119px 16px 118px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #F6F7CD;
+    border: none;
+    font-size: medium;
+
+}
