@@ -8,7 +8,13 @@
     border-radius: 10px;
     border: 3px solid #55761A;
     background: #FFF;
-    width: 890px;
+    width: 930px;
     height: 952px;
     margin: 20px 0 40px 0;
+    overflow: auto;
+}
+
+.completedOrders_item_products {
+    display: flex;
+    flex-wrap: wrap;
 }

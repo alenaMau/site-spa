@@ -56,7 +56,7 @@ let deleteProduct = async (id) => {
           <div class="basket_products_details">
             <div class="basket_products_imgDetails"></div>
             <div class="basket_products_informationDetails">
-              <span>{{cart.name}}</span>
+              <span class="basket_products_overview">{{cart.name}}</span>
               <h5>Описание: {{cart.description}}</h5>
               <div class="basket_products_detailsQuantity">
                 <button class="basket_products_imgDetailsMinus">-</button>
@@ -66,7 +66,7 @@ let deleteProduct = async (id) => {
             </div>
           </div>
           <span>{{cart.price}}₽</span>
-          <button @click="deleteProduct(cart.id)">Удалить</button>
+          <button class="basket_products_deleteProduct" @click="deleteProduct(cart.id)">Удалить</button>
         </div>
       </div>
       <div class="basket_products_decor">

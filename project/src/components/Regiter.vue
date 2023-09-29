@@ -75,28 +75,28 @@ let submit = async () => {
         <label>
           <input v-model="name" type="text" placeholder="Ваше имя(Обязательно)"/>
         </label>
-        <span v-if="errors['name']">{{errors.name}}</span>
+        <span class="registry_block_form_error" v-if="errors['name']">{{errors.name}}</span>
         <label>
           <input v-model="fname" type="text" placeholder="Ваша Фамилия(Обязательно)"/>
         </label>
-        <span v-if="errors['fname']">{{errors.fname}}</span>
+        <span class="registry_block_form_error" v-if="errors['fname']">{{errors.fname}}</span>
         <label>
           <input v-model="oname" type="text" placeholder="Ваше Отчество(Обязательно)"/>
         </label>
-        <span v-if="errors['oname']">{{errors.oname}}</span>
+        <span class="registry_block_form_error" v-if="errors['oname']">{{errors.oname}}</span>
         <label>
           <input v-model="email" type="email" placeholder="Ваш e-mail(Обязательно)"/>
         </label>
-        <span v-if="errors['email']">{{errors.email}}</span>
+        <span class="registry_block_form_error" v-if="errors['email']">{{errors.email}}</span>
         <label>
           <input v-model="password" class="input" type="password"  placeholder="Пароль(Обязательно)"/>
         </label>
-        <span v-if="errors['password']">{{errors.password}}</span>
+        <span class="registry_block_form_error" v-if="errors['password']">{{errors.password}}</span>
         <label>
           <input v-model="repeat_password" class="input" type="password" placeholder="Повторение пароля(Обязательно)"/>
         </label>
-        <span v-if="errors['repeat_password']">{{errors.repeat_password}}</span>
-        <span v-if="errors['wrong_repeat']">{{errors.wrong_repeat}}</span>
+        <span class="registry_block_form_error" v-if="errors['repeat_password']">{{errors.repeat_password}}</span>
+        <span class="registry_block_form_error" v-if="errors['wrong_repeat']">{{errors.wrong_repeat}}</span>
         <button class="basket_products_decorButton press_activation" type="submit" @click="submit()">Зарегистрироваться</button>
       </form>
     </div>

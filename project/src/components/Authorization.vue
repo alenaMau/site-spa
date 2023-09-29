@@ -58,13 +58,13 @@ let submit = async () => {
         <label>
           <input v-model="email" type="email" placeholder="Ваш e-mail(Обязательно)"/>
         </label>
-        <span v-if="errors['email']">{{errors.email}}</span>
+        <span class="registry_block_form_error" v-if="errors['email']">{{errors.email}}</span>
         <label>
           <input v-model="password" class="input" type="password" placeholder="Пароль(Обязательно)"/>
         </label>
-        <span v-if="errors['password']">{{errors.password}}</span>
-        <span v-if="requestError">{{requestError}}</span>
-        <button class="press_activation basket_products_decorButton" type="submit" @click="submit()">Войти</button>
+        <span class="registry_block_form_error" v-if="errors['password']">{{errors.password}}</span>
+        <span class="registry_block_form_error" v-if="requestError">{{requestError}}</span>
+        <button class="press_activation basket_products_decorBut" type="submit" @click="submit()">Войти</button>
       </form>
     </div>
   </section>

@@ -10,7 +10,7 @@ if (!token) {
   window.location = '/';
 }
 
-let orders = [];
+let ordersIds = [];
 
 await axios.get('https://jurapro.bhuser.ru/api-shop/order', {
   headers: { Authorization: `Bearer ${token}` }
@@ -18,10 +18,28 @@ await axios.get('https://jurapro.bhuser.ru/api-shop/order', {
   let data = response.data.data;
   data.forEach(el => {
     el.products.forEach(elem => {
-      orders.push(elem)
+      ordersIds.push(elem)
     })
   });
-})
+});
+
+let products = [];
+await axios.get('https://jurapro.bhuser.ru/api-shop/products', {
+}).then(response => {
+  products = response.data.data;
+});
+
+
+let totalPriceAllTime = 0;
+let normalizedProducts = [];
+for (let i = 0; i < ordersIds.length; i++) {
+  for (let j = 0; j < products.length; j++) {
+    if (ordersIds[i] === products[j].id) {
+      normalizedProducts.push(products[j]);
+      totalPriceAllTime += products[j].price;
+    }
+  }
+}
 </script>
 
 
@@ -29,9 +47,15 @@ await axios.get('https://jurapro.bhuser.ru/api-shop/order', {
   <Header />
     <section class="completedOrders">
       <h3>Оформленные заказы</h3>
+      <span>Стоимость оформленных товаров за все время: <b>{{totalPriceAllTime}}</b>₽</span>
       <div class="completedOrders_item">
-        <div class="completedOrders_item_products" v-for="order in orders">
-          <h3>{{order}}</h3>
+        <div class="completedOrders_item_products">
+          <div class="catalog_item_box" v-for="product in normalizedProducts">
+            <div class="catalog_item_imgBox">
+              <span class="catalog_item_price">{{product.price}}₽</span>
+            </div>
+            <span class="catalog_item_name">{{product.name}}</span>
+          </div>
         </div>
       </div>
     </section>

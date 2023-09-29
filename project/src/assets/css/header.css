@@ -8,7 +8,6 @@ header {
     justify-content: space-between;
     text-decoration: none;
     align-items: center;
-
 }
 
 .header_logo {
@@ -54,9 +53,6 @@ header {
     flex-shrink: 0;
 }
 
-.header_nameIcon_completedOrders {
-
-}
 
 .header_imgIcon_authorization {
     background-image: url("../img/authorizationUser.svg");
@@ -84,7 +80,6 @@ header {
     background-repeat: no-repeat;
     flex-shrink: 0;
     text-decoration: none;
-
 }
 
 a {

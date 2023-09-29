@@ -12,8 +12,9 @@ body {
 }
 
 .authorization_box_form {
-    width: 650px;
-    height: 380px;
+    width: 558px;
+    height: 248px;
+    padding: 25px;
     flex-shrink: 0;
     border-radius: 10px;
     background: #9EB33E;
@@ -27,7 +28,7 @@ body {
 .header_buttonHome {
     background: #3b5338;
     border-radius: 25px;
-    border: #3b5338 10px;
+    border: none;
     width:85px;
     height: 40px;
     padding: 5px;
@@ -53,9 +54,10 @@ input {
     border: none;
     outline: none;
     padding-left: 20px;
+    margin: 5px;
 }
 
-.basket_products_decorButton {
+.basket_products_decorBut {
     display: inline-flex;
     padding: 15px 119px 16px 118px;
     justify-content: center;
@@ -64,6 +66,7 @@ input {
     background: #F6F7CD;
     border: none;
     font-size: medium;
+    margin-left: 145px;
 }
 button:hover {
     background: #dadb93;
